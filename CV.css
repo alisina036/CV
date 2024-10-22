@@ -150,7 +150,7 @@ ul{
     grid-row: 9 / 13;
     grid-column: 7 / 15;
     background: linear-gradient(lightblue, pink);
-    color: black;text-emphasis: none;
+    color: black;
     
     display: flex;
     flex-direction: column; /* Stack heading and list vertically */
