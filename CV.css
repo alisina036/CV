@@ -42,14 +42,26 @@ ul{
     flex-wrap: wrap;
 }
 .about {
+    grid-row: 3;
     grid-column: 1/21;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;  /* Stapel items verticaal */
+    align-items: center;  /* Centreer de items horizontaal */
+    justify-content: center;  /* Centreer de items verticaal */
     text-align: center;
-    background-color: white;
 }
 
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#about-text{
+    margin-top: 50px;
+}
 @media (orientation: portrait) {
     ul{
         grid-column: 11/20;
