@@ -1,19 +1,23 @@
 body, html{
-    background-color: white;
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 .grid-layout{
     display:grid;
-    background-color: white;
+    background-color: black;
     grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
     grid-auto-rows: 100px;
 }
-.nav{
-    background: linear-gradient(90deg, lightblue, white, lightblue);
-    grid-column: 1/21;
-    grid-row: 1;
-    filter: drop-shadow(0px 10px 5px grey);
+.nav {
+    background: linear-gradient(90deg, lightblue, pink);
+    filter: drop-shadow(0px 10px 5px rgb(255, 196, 231));
+    position: fixed;  /* Sticks the navbar to the top */
+    top: 0;           /* Aligns the navbar to the top of the page */
+    left: 0;          /* Aligns the navbar to the left of the page */
+    width: 100%;      /* Make the navbar span the entire width */
+    z-index: 1000;    /* Ensures the navbar stays on top of other content */
 }
+
 .naam{
     margin-top: 30px;
     margin-left: 30px;
@@ -30,46 +34,264 @@ a {
 }
 div{
     display:grid;
-    background-color: white;
+
     grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
     grid-auto-rows: 100px;
 }
 ul{
-    grid-column: 14/20;
+    grid-column: 13/20;
+    grid-row: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 .about {
+    color: pink;
     grid-row: 3;
     grid-column: 1/21;
     display: flex;
     flex-direction: column;  /* Stapel items verticaal */
     align-items: center;  /* Centreer de items horizontaal */
     justify-content: center;  /* Centreer de items verticaal */
-    text-align: center;
+
 }
 
 .profile-photo {
+    grid-row: 1;
+    margin-left: -25%;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+    transition: 0.5s;
+    box-shadow: 0 4px 10px black; /* Subtiele schaduw */
 }
 
-#about-text{
-    margin-top: 50px;
+.profile-photo:hover {
+    margin-top: -20px;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px lightblue; /* Versterkte schaduw bij hover */
 }
+
+
+#about-text{
+    margin-top: -6%;
+    margin-left: 45%;
+    margin-right: 15%;
+    text-align: left;
+}
+.projects{
+    grid-column: 1/21;
+    grid-row: 5/7;
+    text-align: center;
+}
+#projects{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1/21;
+    color: pink;
+}
+
+/* Voor de .javascript sectie */
+.javascript {
+    background: linear-gradient(45deg, pink ,#FDB7C2 ,#F7E0E3);
+    width: 600px;
+    height: 200px;
+    border-radius: 100px 0px 0px 100px;
+    margin-left: 12.5vw;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat de h2 boven de h3 staat */
+    justify-content: center; /* Verticaal gecentreerd */
+    align-items: center; /* Horizontaal gecentreerd */
+    text-align: center; /* Tekst gecentreerd */
+    color: black; /* Tekstkleur */
+}
+
+.fullstack {
+    background: linear-gradient(-45deg, lightblue, #C6E1F2, #E1F0FA);
+    width: 600px;
+    height: 200px;
+    border-radius: 0px 100px 100px 0px;
+    margin-left: 47.5vw;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat de h2 boven de h3 staat */
+    justify-content: center; /* Verticaal gecentreerd */
+    align-items: center; /* Horizontaal gecentreerd */
+    text-align: center; /* Tekst gecentreerd */
+    color: black; /* Tekstkleur */
+    padding-bottom: 0px;
+}
+
+/* Hover effect */
+.javascript:hover {
+    margin-left: 12.5vw;
+    border-radius: 100px;
+    width: 1285px;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px pink);
+}
+
+.fullstack:hover {
+    margin-left: 7.5vw;
+    border-radius: 100px;
+    width: 1285px;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 20px lightblue);
+}
+
+.skills {
+    grid-row: 9 / 13;
+    grid-column: 7 / 15;
+    background: linear-gradient(lightblue, pink);
+    color: black;
+    
+    display: flex;
+    flex-direction: column; /* Stack heading and list vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers heading horizontally */
+    padding: 20px; /* Optional: Adds some padding inside the container */
+    border-radius: 25px;
+}
+
+.skills h1 {
+    margin-bottom: 20px; /* Adds space between heading and list */
+    text-align: center; /* Center the heading text */
+}
+
+#skills-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
+    gap: 10px; /* Adds space between list items */
+    align-items: center; /* Center the list items */
+    width: 100%; /* Ensure the list takes the full width for left alignment */
+}
+
+#skills-list li {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    display: flex; /* Enable flex layout for the list item */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center circles within the list item */
+    width: 100%; /* Make each list item full width for better centering */
+}
+
+.skill-rating {
+    display: flex; /* Flexbox for circles */
+    margin-left: 10px; /* Adds space between skill name and circles */
+}
+
+.circle {
+    width: 20px; /* Width of the circle */
+    height: 20px; /* Height of the circle */
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid black; /* Border color */
+    margin-right: 5px; /* Space between circles */
+    background-color: transparent; /* Default background color */
+    filter: drop-shadow(2px 2px 2px grey);
+}
+
+.circle.filled {
+    background-color: white; /* Fill color for the filled circles */
+    filter: drop-shadow(2px 2px 2px black);
+}
+.contact {
+    grid-row: 14 / 16; /* Past de grid-rijen aan voor de nieuwe sectie */
+    grid-column: 1 / 21;
+    color: black;
+    background: linear-gradient(lightblue, pink);
+    display: flex;
+    flex-direction: column; /* Stapel de elementen verticaal */
+    align-items: center; /* Centreer de elementen */
+    justify-content: center; /* Centreer de elementen */
+    padding: 20px; /* Voeg wat padding toe */
+    border-radius: 25px;
+}
+
+.contact h1 {
+    margin-bottom: 20px; /* Ruimte onder de kop */
+}
+
+.contact-info {
+    display: flex; /* Flexbox om elementen naast elkaar te plaatsen */
+    gap: 30px; /* Ruimte tussen telefoon en email */
+}
+
+.contact-info p {
+    font-size: 1.5rem; /* Grotere tekst voor leesbaarheid */
+}
+
+
+
+
+
 @media (orientation: portrait) {
     ul{
-        grid-column: 11/20;
+        grid-column: 10/20;
         grid-row: 1;
         font-size: 75%;
     }
     .naam{
         font-size: 150%;
-        margin-top: 35px;
+        margin-top: 20px;
+    }
+    .skills{
+        grid-column: 2/20;
+        grid-row: 15/19;
+    }
+    .about{
+        grid-row: 4;
+    }
+    .profile-photo{
+        margin-left: 0%;
+    }
+    #about-text{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 10%;
+    }
+    .projects{
+        grid-row: 7;
+    }
+    .javascript {
+        grid-row: 2;
+        grid-column: 1 / 21; /* Laat de kaart de volledige breedte van de grid innemen */
+        width: 200px;
+        height: 300px;
+        border-radius: 100px 100px 0px 0px;
+        margin: 0 auto; /* Dit centreert de sectie horizontaal */
+    }
+    .javascript:hover{
+        height: 600px;
+        width: 200px;
+        margin-left: 26.7vw;
+    }
+    .fullstack {
+        grid-row: 5;
+        grid-column: 1 / 21; /* Laat de kaart de volledige breedte van de grid innemen */
+        width: 200px;
+        height: 300px;
+        border-radius: 0px 0px 100px 100px;
+        margin: 0 auto; /* Dit centreert de sectie horizontaal */
+    }
+    .fullstack:hover{
+        height: 600px;
+        width: 200px;
+        margin-left: 26.7vw;
+        margin-top: -300px;
+    }
+    .contact{
+        grid-row: 20/22;
     }
 }
