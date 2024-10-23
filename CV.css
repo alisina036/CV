@@ -39,7 +39,7 @@ div{
     grid-auto-rows: 100px;
 }
 ul{
-    grid-column: 13/20;
+    grid-column: 12/20;
     grid-row: 1;
     display: flex;
     justify-content: space-between;
@@ -235,20 +235,27 @@ ul{
 
 @media (orientation: portrait) {
     ul{
-        grid-column: 10/20;
-        grid-row: 1;
+        grid-column: 1/20;
+        grid-row: 2;
         font-size: 75%;
     }
     .naam{
+        margin-left: 0px;
+        grid-column: 1/21;
         font-size: 150%;
         margin-top: 20px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        font-size: 40px;
     }
     #skills{
         grid-column: 2/20;
-        grid-row: 15/19;
+        grid-row: 16/20;
     }
     .about{
-        grid-row: 4;
+        grid-row: 5;
     }
     .profile-photo{
         margin-left: 0%;
@@ -262,7 +269,7 @@ ul{
         margin-top: 10%;
     }
     .projects{
-        grid-row: 7;
+        grid-row: 8;
     }
     .javascript {
         grid-row: 2;
@@ -292,6 +299,6 @@ ul{
         margin-top: -300px;
     }
     .contact{
-        grid-row: 20/22;
+        grid-row: 21/23;
     }
 }
