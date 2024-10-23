@@ -282,7 +282,7 @@ ul{
     .javascript:hover{
         height: 600px;
         width: 200px;
-        margin-left: 26.7vw;
+        margin: 0 auto;
     }
     .fullstack {
         grid-row: 5;
@@ -295,7 +295,7 @@ ul{
     .fullstack:hover{
         height: 600px;
         width: 200px;
-        margin-left: 26.7vw;
+        margin: 0 auto;
         margin-top: -300px;
     }
     .contact{
